@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+
+KEYS=iplinux.pub
+
+clean:
+	dh_testdir
+	dh_testroot
+
+	rm -rf gpghome
+
+	dh_clean
+
+build: gpghome/trusted.gpg
+gpghome/trusted.gpg: $(KEYS)
+	dh_testdir
+
+	mkdir -p gpghome
+	cat $(KEYS) | gpg --import \
+		 --home `pwd`/gpghome \
+		 --no-default-keyring \
+		 --primary-keyring gpghome/trusted.gpg 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+
+	dh_installdirs
+	install -m644 gpghome/trusted.gpg debian/apt-keys/etc/apt
+
+binary-arch:
+
+binary-indep: install
+	dh_testdir
+	dh_testroot
+
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_builddeb
+
+binary: binary-indep binary-arch
+
+.PHONY: binary binary-arch binary-indep clean

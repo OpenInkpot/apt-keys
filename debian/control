@@ -1,0 +1,12 @@
+Source: apt-keys
+Section: core
+Priority: required
+Maintainer: Mikhail Gusarov <dottedmag@dottedmag.net>
+Build-Depends: debhelper (>> 7), gnupg
+XCS-Cross-Host-Build-Depends: debhelper (>> 7), gnupg
+
+Package: apt-keys
+Architecture: all
+Description: APT signing keys
+ This package contains the public keys for checking signature on IPlinux APT
+ repository.
