@@ -1,3 +1,10 @@
+apt-keys (0.1.1) asimov; urgency=low
+
+  * Oops. Previous release contained the autobuilder key, not repository
+    key. Fixed.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Tue, 10 Mar 2009 18:04:05 +0600
+
 apt-keys (0.1) asimov; urgency=low
 
   * Initial Release.
