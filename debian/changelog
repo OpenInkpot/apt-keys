@@ -1,3 +1,9 @@
+apt-keys (0.1.1.oi1) asimov; urgency=low
+
+  * Build for OpenInkpot: added OI repository signing key.
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Thu, 12 Mar 2009 04:05:58 +0600
+
 apt-keys (0.1.1) asimov; urgency=low
 
   * Oops. Previous release contained the autobuilder key, not repository
