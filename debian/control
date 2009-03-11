@@ -8,5 +8,5 @@ XCS-Cross-Host-Build-Depends: debhelper (>> 7), gnupg
 Package: apt-keys
 Architecture: all
 Description: APT signing keys
- This package contains the public keys for checking signature on IPlinux APT
- repository.
+ This package contains public keys for checking signature on IPlinux and
+ OpenInkpot APT repositories.

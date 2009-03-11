@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-KEYS=iplinux.pub
+KEYS=iplinux.pub openinkpot.pub
 
 clean:
 	dh_testdir
