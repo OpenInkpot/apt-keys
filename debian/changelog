@@ -1,3 +1,9 @@
+apt-keys (0.1.2.oi1) asimov; urgency=low
+
+  * Use new IPlinux and OpenInkpot keys (previous ones are lost).
+
+ -- Mikhail Gusarov <dottedmag@dottedmag.net>  Tue, 03 Nov 2009 18:42:47 +0600
+
 apt-keys (0.1.1.oi2) asimov; urgency=low
 
   * Added OI repository signing key instead of builder signing key.
